@@ -87,10 +87,10 @@ export default function RefundPolicyPage() {
             <p>
               If you have any questions or concerns about our refund policy, please contact us at{" "}
               <a
-                href="mailto:aman@riseyourhealthh.com"
+                href="mailto:admin@riseyourhealthh.com"
                 className="font-medium text-[#287417] hover:underline"
               >
-                aman@riseyourhealthh.com
+                admin@riseyourhealthh.com
               </a>
             </p>
           </section>

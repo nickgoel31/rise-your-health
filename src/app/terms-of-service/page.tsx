@@ -73,6 +73,21 @@ export default function TermsOfServicePage() {
               These Terms shall be governed by and interpreted in accordance with applicable laws. We reserve the right to revise or modify these Terms at any time with immediate effect upon posting to this page.
             </p>
           </section>
+
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              6. Contact Information
+            </h2>
+            <p>
+              For any questions regarding these Terms of Service or our coaching agreements, please reach out to us at{" "}
+              <a
+                href="mailto:admin@riseyourhealthh.com"
+                className="font-medium text-[#287417] hover:underline"
+              >
+                admin@riseyourhealthh.com
+              </a>.
+            </p>
+          </section>
         </div>
       </main>
 

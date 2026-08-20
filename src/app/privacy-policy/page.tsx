@@ -82,7 +82,13 @@ export default function PrivacyPolicyPage() {
               5. Your Rights & Contact Information
             </h2>
             <p>
-              You have the right to request access to, correction of, or deletion of your personal data at any time. For questions regarding our privacy practices or to exercise your rights, please reach out to us directly through our contact channels.
+              You have the right to request access to, correction of, or deletion of your personal data at any time. For questions regarding our privacy practices or to exercise your rights, please reach out to us directly at{" "}
+              <a
+                href="mailto:admin@riseyourhealthh.com"
+                className="font-medium text-[#287417] hover:underline"
+              >
+                admin@riseyourhealthh.com
+              </a>.
             </p>
           </section>
         </div>

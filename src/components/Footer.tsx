@@ -104,6 +104,12 @@ export default function Footer() {
             <h3 className="font-sans text-sm sm:text-[15px] font-semibold text-[#022342] tracking-tight mb-1">
               Connect
             </h3>
+            <a
+              href="mailto:admin@riseyourhealthh.com"
+              className="font-sans text-sm text-[#475569] hover:text-[#287417] transition-colors"
+            >
+              admin@riseyourhealthh.com
+            </a>
             <button
               type="button"
               onClick={openBookingModal}
