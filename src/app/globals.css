@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: var(--font-instrument-serif), serif;
+  --font-sans: var(--font-instrument-sans), sans-serif;
+  --color-brand-navy: #022342;
+  --color-brand-navy-dark: #01162b;
+  --color-brand-green: #287417;
+  --color-brand-green-hover: #216113;
+  --color-brand-gold: #FE8600;
+  --color-brand-bg: #F4F7F4;
+  --color-brand-bg-alt: #EBF2ED;
+  --color-brand-surface: #FFFFFF;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html.lenis, html.lenis body {
+  height: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* ── Minimalist Custom Scrollbar matching Brand Green ── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(40, 116, 23, 0.35) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(40, 116, 23, 0.35);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(40, 116, 23, 0.7);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSpring {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(18px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.01) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 220ms ease-out forwards;
+}
+
+.animate-modalScale {
+  animation: modalSpring 350ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
