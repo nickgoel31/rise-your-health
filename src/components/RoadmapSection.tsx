@@ -26,28 +26,28 @@ const PHASES: Phase[] = [
   {
     id: "month-0",
     month: "00",
-    label: "Pre-Onboarding",
-    days: "7–10 Days Before Day 1",
-    tagline: "Understand the woman before prescribing a generic PCOS plan.",
+    label: "Baseline Testing",
+    days: "Where Clinically Appropriate",
+    tagline: "Understand your unique biological baseline before prescribing any protocol.",
     objective:
-      "Establish your clinical and lifestyle baseline through a comprehensive 25+ point intake before starting any protocol.",
+      "Establish your clinical, hormonal, and lifestyle baseline through comprehensive diagnostic reviews and a 25+ point health intake.",
     weeks: [
       {
-        title: "25+ Point Health Intake",
+        title: "25+ Point Clinical & Health Intake",
         points: [
           "Menstrual history, cycle regularity, flow & ovulation signs",
           "Androgen symptoms — acne, hair fall, hirsutism",
           "Metabolic markers, waist, weight history & energy crashes",
           "Sleep quality, stress levels & exercise history",
-          "Medical history, labs, medications & fertility goals",
+          "Medical history, lab reports, medications & fertility goals",
         ],
       },
       {
-        title: "Baseline Scorecard Creation",
+        title: "Baseline Health Scorecard",
         points: [
           "Record cycle length, energy, sleep quality & stress levels",
           "Establish baseline androgen & craving severity scores",
-          "Holistic multi-dimensional tracking beyond blood levels",
+          "Holistic multi-dimensional tracking beyond basic blood tests",
         ],
       },
     ],
@@ -55,12 +55,12 @@ const PHASES: Phase[] = [
   {
     id: "month-1",
     month: "01",
-    label: "Assess & Stabilize",
+    label: "Month 1 — Stabilize",
     days: "Days 1–30",
     tagline:
       "Establish the foundations. No rush to fix everything in week one.",
     objective:
-      "Build calm, steady foundations in nutrition, gentle movement, and sleep habits with zero crash diets.",
+      "Build calm, steady foundations in nutrition, gentle movement, circadian rhythm, and sleep habits with zero crash diets.",
     weeks: [
       {
         title: "Week 1 — Understand & Onboard",
@@ -99,11 +99,11 @@ const PHASES: Phase[] = [
   {
     id: "month-2",
     month: "02",
-    label: "Correct & Build",
+    label: "Month 2 — Build",
     days: "Days 31–60",
     tagline: "Move from following a plan to my lifestyle is changing.",
     objective:
-      "Address your unique metabolic drivers, identify emotional and lifestyle triggers, and progress physical fitness.",
+      "Build metabolic strength, address your unique symptom drivers, identify emotional triggers, and progress physical fitness.",
     weeks: [
       {
         title: "Weeks 5–6 — Nutrition Personalization",
@@ -134,11 +134,11 @@ const PHASES: Phase[] = [
   {
     id: "month-3",
     month: "03",
-    label: "Optimize & Progress",
+    label: "Month 3 — Optimize",
     days: "Days 61–90",
     tagline: "The highest-touch phase. Solving individual bottlenecks.",
     objective:
-      "Tailor specific intervention pathways for your remaining symptom drivers across four key categories.",
+      "Deep-dive optimization and specific intervention pathways for your remaining symptom drivers across four key categories.",
     weeks: [
       {
         title: "4-Category Deep-Dive Optimization",
@@ -162,12 +162,12 @@ const PHASES: Phase[] = [
   {
     id: "month-4",
     month: "04",
-    label: "Consolidate & Sustain",
+    label: "Month 4 — Consolidate",
     days: "Days 91–120",
     tagline:
       "Teaching you how to maintain this for life without depending on a coach.",
     objective:
-      "Consolidate all gains and create your personalized lifetime PCOS Maintenance Blueprint.",
+      "Consolidate all gains, complete final assessments, and create your personalized lifetime Maintenance Blueprint.",
     weeks: [
       {
         title: "Weeks 13–14 — Trajectory & Trigger Lock-In",
@@ -186,11 +186,11 @@ const PHASES: Phase[] = [
         ],
       },
       {
-        title: "Week 16 — Final Transformation Review",
+        title: "Week 16 — Final Assessment & Handover",
         points: [
           "Complete baseline vs. final health scorecard review",
           "Celebration of measurable physical & metabolic shifts",
-          "Handover of maintenance plan & alumni check-ins",
+          "Handover of maintenance plan & optional ongoing care",
         ],
       },
     ],
@@ -313,16 +313,19 @@ export default function RoadmapSection() {
 
           <ScrollReveal delay={320} duration={800} distance={18}>
             <p className="mt-5 font-sans text-sm sm:text-base text-white/70 font-light leading-relaxed max-w-xl mx-auto">
-              Five phases. Four months. A structured clinical and lifestyle
-              protocol — backed by measurable health scorecards at every step.
+              A structured, clinically-informed protocol from baseline testing through four transformational months — backed by measurable health scorecards at every step.
             </p>
           </ScrollReveal>
 
           {/* Phase number indicators */}
           <ScrollReveal delay={420} duration={700} distance={14}>
-            <div className="mt-12 flex items-center justify-center gap-3 sm:gap-4">
+            <div className="mt-12 flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
               {PHASES.map((phase, idx) => {
                 const isOpen = openPhase === idx;
+                const shortLabel = phase.label.includes("—")
+                  ? phase.label.split("—")[1].trim()
+                  : phase.label;
+
                 return (
                   <button
                     key={phase.id}
@@ -341,8 +344,8 @@ export default function RoadmapSection() {
                     >
                       {phase.month}
                     </span>
-                    <span className="font-sans text-[9px] sm:text-[10px] tracking-widest uppercase text-white/50 hidden sm:block">
-                      {phase.label.split(" ")[0]}
+                    <span className="font-sans text-[9px] sm:text-[10px] tracking-widest uppercase text-white/60 hidden sm:block">
+                      {shortLabel}
                     </span>
                     {/* Dot indicator */}
                     <span

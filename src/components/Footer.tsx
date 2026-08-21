@@ -77,7 +77,7 @@ export default function Footer() {
               href="/#services"
               className="font-sans text-sm text-[#475569] hover:text-[#287417] transition-colors"
             >
-              5 Pillars
+              4 Pillars
             </Link>
             <Link
               href="/#roadmap"

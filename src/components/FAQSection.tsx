@@ -14,27 +14,41 @@ const FAQS: FAQItem[] = [
   {
     id: 1,
     number: "1.",
-    question: "Do you guarantee PCOS reversal or quick weight loss?",
+    question: "Do you guarantee PCOS reversal?",
     answer:
-      "No. PCOS is a chronic endocrine and metabolic condition, and outcomes vary for every woman. Our defensible, evidence-based promise is measurable symptom and metabolic health improvement through personalized lifestyle, non-restrictive nutrition, clinical assessment, and continuous coaching — never false promises.",
+      "Yes, 100% money back guarantee in case you follow the protocol diligently and still don’t see any results.",
   },
   {
     id: 2,
     number: "2.",
-    question: "Why is the program structured across 4 full months (16 weeks)?",
+    question: "Do I need to take medicine?",
     answer:
-      "Hormone and metabolic pathways require consistent biological time to regulate. Month 1 stabilizes foundations, Month 2 corrects individual drivers, Month 3 optimizes lingering bottlenecks, and Month 4 consolidates habits so you build permanent self-reliance.",
+      "No. Our approach is lifestyle-based, so you won’t rely on pills for weight management or hormonal balance.",
   },
   {
     id: 3,
     number: "3.",
-    question: "Who is on my Care Squad and managing my protocol?",
+    question: "What if I’ve tried other programs and failed?",
     answer:
-      "Every woman is supported by four specialized roles: our Clinical/Medical team for medical oversight and lab reviews, a dedicated Nutritionist for whole-food cycle syncing, a Lifestyle Coach for movement and cortisol management, and a Client Coordinator for swift support.",
+      "We focus on the root cause, not just symptoms. Our science-backed framework which is clinically approved, ensures lasting, real-world results.",
   },
   {
     id: 4,
     number: "4.",
+    question: "Why is the program structured across 4 full months (16 weeks)?",
+    answer:
+      "Hormone and metabolic pathways require consistent biological time to regulate. Month 1: Stabilize foundations, Month 2: Build metabolic resilience, Month 3: Optimize lingering bottlenecks, and Month 4: Consolidate habits with a personal maintenance plan so you build permanent self-reliance.",
+  },
+  {
+    id: 5,
+    number: "5.",
+    question: "Who is on my Care Squad and managing my protocol?",
+    answer:
+      "Every woman is supported by our dedicated Care Squad: our Clinical/Medical team for medical oversight and lab reviews, a dedicated Nutritionist for whole-food cycle syncing, a Lifestyle Coach for movement and habit adherence, and a Psychologist for mental wellbeing and stress management.",
+  },
+  {
+    id: 6,
+    number: "6.",
     question: "What happens after Month 4? Will I be dependent on a coach?",
     answer:
       "Our core mission in Month 4 is teaching you self-sufficiency. You receive a personalized lifetime PCOS Maintenance Blueprint containing your non-negotiables, early warning signs, and recovery protocols for stress or travel so you thrive independently.",
@@ -82,7 +96,7 @@ export default function FAQSection() {
             return (
               <ScrollReveal
                 key={faq.id}
-                delay={index * 100 + 150}
+                delay={index * 80 + 100}
                 duration={700}
                 distance={18}
               >

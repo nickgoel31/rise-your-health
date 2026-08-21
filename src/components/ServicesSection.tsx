@@ -71,7 +71,7 @@ function FourPetalIcon() {
   );
 }
 
-// 5 Stages running throughout the 4-Month Transformation Program
+// The 4 Continuous Pillars of the 4-Month Transformation Program
 const SERVICES: ServiceItem[] = [
   {
     id: "clinical-assessment",
@@ -99,19 +99,11 @@ const SERVICES: ServiceItem[] = [
   },
   {
     id: "sleep-stress",
-    title: "4. Sleep, Stress & Cortisol Regulation",
+    title: "4. Sleep, Stress & Mental Wellbeing",
     description:
-      "Circadian rhythm alignment, nervous system soothing, and restorative recovery tools to calm chronic adrenal stress and reduce afternoon fatigue.",
+      "Circadian rhythm alignment, psychologist-led nervous system soothing, and recovery tools to calm chronic adrenal stress and support emotional wellbeing.",
     href: "/#roadmap",
     icon: <FourPetalIcon />,
-  },
-  {
-    id: "tracking-accountability",
-    title: "5. Tracking, Coaching & Accountability",
-    description:
-      "Standardized weekly check-in reviews, 30-second daily habit logging, and dedicated care squad guidance to keep you supported every step of the journey.",
-    href: "/#roadmap",
-    icon: <StarBlossomIcon />,
   },
 ];
 
@@ -127,13 +119,13 @@ export default function ServicesSection() {
           <div className="max-w-2xl">
             {/* Pill Badge */}
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E5EFE7] text-[#022342] text-[12px] font-sans font-medium tracking-wide mb-5">
-              The 5 Continuous Pillars
+              The 4 Continuous Pillars
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-normal leading-[1.08] tracking-tight text-[#022342]">
               How we help you heal
             </h2>
             <p className="mt-4 text-[#475569] text-sm sm:text-base md:text-[1.05rem] font-light leading-relaxed">
-              Five clinical and lifestyle stages running continuously throughout your 4-month transformation to address root causes, not just symptoms.
+              Four clinical and lifestyle stages running continuously throughout your 4-month transformation to address root causes, not just symptoms.
             </p>
           </div>
 

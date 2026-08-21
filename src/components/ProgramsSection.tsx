@@ -18,7 +18,7 @@ const DELIVERABLES = [
   {
     number: "03",
     title: "Dedicated 4-Person Care Squad",
-    desc: "Doctor, Nutritionist, Lifestyle Coach, and Client Coordinator — all working as one team for you.",
+    desc: "Doctor, Nutritionist, Lifestyle Coach, and Psychologist — all working as one team for you.",
   },
   {
     number: "04",
@@ -50,7 +50,7 @@ const DELIVERABLES = [
 const STATS = [
   { value: "16", label: "Weeks" },
   { value: "4", label: "Phases" },
-  { value: "5", label: "Pillars" },
+  { value: "4", label: "Pillars" },
   { value: "1:1", label: "Program" },
 ];
 

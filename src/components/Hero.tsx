@@ -107,7 +107,7 @@ export default function Hero() {
             {/* Stat 2 */}
             <div>
               <div className="text-3xl sm:text-4xl font-light text-white tracking-tight">
-                5 Pillars
+                4 Pillars
               </div>
               <div className="text-xs sm:text-sm text-white/75 font-light leading-tight mt-1">
                 Clinical, Nutrition, Movement & Habits

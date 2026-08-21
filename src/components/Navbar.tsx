@@ -9,7 +9,7 @@ import { useBookingModal } from "@/context/BookingModalContext";
 const NAV_LINKS = [
   { href: "/#home", label: "Home" },
   { href: "/#signs", label: "Signs" },
-  { href: "/#services", label: "5 Pillars" },
+  { href: "/#services", label: "4 Pillars" },
   { href: "/#roadmap", label: "16-Week Roadmap" },
   { href: "/#faq", label: "FAQ" },
 ];
