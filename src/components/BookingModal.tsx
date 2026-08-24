@@ -60,6 +60,30 @@ const TIME_SLOTS = [
   "Flexible / Any of these slots",
 ];
 
+// Indian Phone Number Validator
+function validateIndianPhone(phone: string): { isValid: boolean; formatted: string; error?: string } {
+  const cleaned = phone.trim().replace(/[\s\-()]/g, "");
+  const indianMobileRegex = /^(?:\+91|91|0)?[6-9]\d{9}$/;
+
+  if (!cleaned) {
+    return { isValid: false, formatted: phone, error: "Please enter your WhatsApp / phone number" };
+  }
+
+  if (!indianMobileRegex.test(cleaned)) {
+    return {
+      isValid: false,
+      formatted: phone,
+      error: "Please enter a valid 10-digit Indian mobile number (e.g. 98765 43210 or +91 98765 43210)",
+    };
+  }
+
+  const match = cleaned.match(/([6-9]\d{9})$/);
+  const core10 = match ? match[1] : cleaned;
+  const formatted = `+91 ${core10.slice(0, 5)} ${core10.slice(5)}`;
+
+  return { isValid: true, formatted };
+}
+
 export default function BookingModal() {
   const { isOpen, closeBookingModal } = useBookingModal();
 
@@ -157,8 +181,10 @@ export default function BookingModal() {
     if (!formData.email.trim() || !formData.email.includes("@")) {
       newErrors.email = "Please enter a valid email address";
     }
-    if (!formData.phone.trim() || formData.phone.length < 8) {
-      newErrors.phone = "Please enter a valid WhatsApp/Phone number";
+
+    const phoneValidation = validateIndianPhone(formData.phone);
+    if (!phoneValidation.isValid) {
+      newErrors.phone = phoneValidation.error || "Please enter a valid 10-digit Indian phone number";
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -179,16 +205,16 @@ export default function BookingModal() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          fullName: formData.fullName,
-          email: formData.email,
-          phone: formData.phone,
+          fullName: formData.fullName.trim(),
+          email: formData.email.trim(),
+          phone: phoneValidation.formatted,
           goal: selectedGoal,
           goalTitle: goalObj ? `${goalObj.title} (${goalObj.desc})` : selectedGoal,
           timeline: selectedTimeline,
           timelineLabel: timelineObj ? `${timelineObj.label} (${timelineObj.detail})` : selectedTimeline,
           methods: selectedMethods,
           preferredSlot: formData.preferredSlot,
-          notes: formData.notes,
+          notes: formData.notes.trim(),
         }),
       });
 
@@ -620,21 +646,31 @@ export default function BookingModal() {
 
                 {/* Phone / WhatsApp */}
                 <div>
-                  <label className="block font-sans text-xs font-medium text-[#334155] mb-1">
-                    WhatsApp / Phone Number *
-                  </label>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="block font-sans text-xs font-medium text-[#334155]">
+                      WhatsApp / Phone Number *
+                    </label>
+                    <span className="text-[10.5px] text-[#64748B] font-sans">
+                      🇮🇳 10-Digit Indian Mobile
+                    </span>
+                  </div>
                   <input
                     type="tel"
                     required
-                    placeholder="e.g. +91 98765 43210"
+                    maxLength={16}
+                    placeholder="e.g. 98765 43210 or +91 98765 43210"
                     value={formData.phone}
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="w-full px-4 py-2.5 sm:py-3 rounded-xl bg-white border border-[#DCE7DF] text-[#022342] text-sm font-sans placeholder:text-[#94A3B8] focus:outline-none focus:border-[#287417] focus:ring-1 focus:ring-[#287417] transition-colors"
+                    className={`w-full px-4 py-2.5 sm:py-3 rounded-xl bg-white border text-[#022342] text-sm font-sans placeholder:text-[#94A3B8] focus:outline-none transition-colors ${
+                      errors.phone
+                        ? "border-red-400 focus:border-red-500 focus:ring-1 focus:ring-red-500 bg-red-50/20"
+                        : "border-[#DCE7DF] focus:border-[#287417] focus:ring-1 focus:ring-[#287417]"
+                    }`}
                   />
                   {errors.phone && (
-                    <p className="text-[11px] text-red-600 mt-1">{errors.phone}</p>
+                    <p className="text-[11px] text-red-600 mt-1 font-medium">{errors.phone}</p>
                   )}
                 </div>
 
