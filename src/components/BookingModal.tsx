@@ -60,25 +60,26 @@ const TIME_SLOTS = [
   "Flexible / Any of these slots",
 ];
 
-// Indian Phone Number Validator
+// Phone Number Validator (10 digits starting from any number)
 function validateIndianPhone(phone: string): { isValid: boolean; formatted: string; error?: string } {
   const cleaned = phone.trim().replace(/[\s\-()]/g, "");
-  const indianMobileRegex = /^(?:\+91|91|0)?[6-9]\d{9}$/;
 
   if (!cleaned) {
     return { isValid: false, formatted: phone, error: "Please enter your WhatsApp / phone number" };
   }
 
-  if (!indianMobileRegex.test(cleaned)) {
+  const phoneRegex = /^(?:\+91|91|0)?(\d{10})$/;
+  const match = cleaned.match(phoneRegex);
+
+  if (!match) {
     return {
       isValid: false,
       formatted: phone,
-      error: "Please enter a valid 10-digit Indian mobile number (e.g. 98765 43210 or +91 98765 43210)",
+      error: "Please enter a valid 10-digit mobile number",
     };
   }
 
-  const match = cleaned.match(/([6-9]\d{9})$/);
-  const core10 = match ? match[1] : cleaned;
+  const core10 = match[1];
   const formatted = `+91 ${core10.slice(0, 5)} ${core10.slice(5)}`;
 
   return { isValid: true, formatted };

@@ -5,14 +5,14 @@ const DEFAULT_WEBHOOK_URL =
 
 function validateIndianPhone(phone: string): { isValid: boolean; formatted: string } {
   const cleaned = phone.trim().replace(/[\s\-()]/g, "");
-  const indianMobileRegex = /^(?:\+91|91|0)?[6-9]\d{9}$/;
+  const phoneRegex = /^(?:\+91|91|0)?(\d{10})$/;
+  const match = cleaned.match(phoneRegex);
 
-  if (!indianMobileRegex.test(cleaned)) {
+  if (!match) {
     return { isValid: false, formatted: phone };
   }
 
-  const match = cleaned.match(/([6-9]\d{9})$/);
-  const core10 = match ? match[1] : cleaned;
+  const core10 = match[1];
   const formatted = `+91 ${core10.slice(0, 5)} ${core10.slice(5)}`;
 
   return { isValid: true, formatted };
