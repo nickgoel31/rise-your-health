@@ -250,40 +250,29 @@ export default function TestimonialsSection() {
           </ScrollReveal>
         </div>
 
-        {/* Clinical Care Commitment & Vision Section */}
-        <ScrollReveal delay={200} duration={850} distance={28} className="w-full mt-20 sm:mt-24 max-w-5xl">
-          <div className="rounded-3xl bg-white border border-[#DCE7DF] p-8 sm:p-12 md:p-14 text-center flex flex-col items-center shadow-xs">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#287417]/10 text-[#287417] text-[11.5px] font-sans font-semibold uppercase tracking-wider mb-5">
+        {/* Clinical Care Commitment Card */}
+        <ScrollReveal delay={200} duration={850} distance={28} className="w-full mt-20 sm:mt-24 max-w-4xl">
+          <div className="rounded-3xl bg-white border border-[#DCE7DF] p-8 sm:p-10 md:p-12 text-center flex flex-col items-center shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#287417]/10 text-[#287417] text-[11px] font-sans font-semibold uppercase tracking-wider mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#287417]" />
-              Our Vision & Philosophy
+              Our Care Commitment
             </div>
-
-            <h3 className="font-serif text-2xl sm:text-3xl md:text-[2.25rem] text-[#022342] leading-snug font-normal max-w-3xl">
-              &ldquo;Lasting health transformation is not about quick fixes, restrictive diets, or treating symptoms in isolation.&rdquo;
-            </h3>
-
-            <p className="mt-5 text-[#475569] text-sm sm:text-base md:text-[1.05rem] font-light leading-relaxed max-w-3xl text-center">
-              At Rise Your Health, we believe in understanding root causes, building sustainable habits, and providing continuous guidance at every stage of your journey. Our flagship <strong className="text-[#022342] font-semibold">4-Month PCOS Reset Method</strong> helps women resolve hormonal and metabolic concerns—such as irregular cycles, weight-management challenges, insulin resistance, and lifestyle fatigue—through a structured, personalized roadmap.
+            <p className="font-serif text-2xl sm:text-3xl md:text-4xl text-[#022342] leading-snug font-normal max-w-2xl">
+              &ldquo;Sustainable hormone health isn&apos;t about restriction. It&apos;s about giving your body the exact biological safety signals it needs to heal.&rdquo;
             </p>
-
-            <div className="mt-8 pt-8 border-t border-[#EEF4EF] w-full grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-              <div className="p-5 sm:p-6 rounded-2xl bg-[#F8FAF8] border border-[#E2EBE4]">
-                <p className="font-sans text-xs font-semibold uppercase tracking-wider text-[#287417] mb-2 flex items-center gap-2">
-                  <span>👩‍⚕️</span> A Multidisciplinary Approach
-                </p>
-                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-light">
-                  Depending on individual needs, our ecosystem brings together nutrition, medical guidance, coaching, lifestyle support, and accountability, so clients aren&apos;t left trying to figure everything out on their own.
-                </p>
-              </div>
-
-              <div className="p-5 sm:p-6 rounded-2xl bg-[#F8FAF8] border border-[#E2EBE4]">
-                <p className="font-sans text-xs font-semibold uppercase tracking-wider text-[#287417] mb-2 flex items-center gap-2">
-                  <span>🌱</span> Our Long-Term Vision
-                </p>
-                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed font-light">
-                  To make personalized, evidence-informed health support more accessible and practical for people who are tired of temporary solutions and want to take meaningful ownership of their health.
-                </p>
-              </div>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 w-full text-xs sm:text-[13px] text-[#475569] font-medium font-sans">
+              <span className="flex items-center gap-2">
+                <span className="text-[#287417] text-base">✓</span> Root-Cause Diagnostics
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="text-[#287417] text-base">✓</span> Zero Crash Diets
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="text-[#287417] text-base">✓</span> Bi-Weekly Scorecards
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="text-[#287417] text-base">✓</span> Lifetime Self-Reliance
+              </span>
             </div>
           </div>
         </ScrollReveal>

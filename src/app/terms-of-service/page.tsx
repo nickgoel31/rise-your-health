@@ -3,8 +3,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Terms of Service | Rise Your Health",
-  description: "Terms of Service for Rise Your Health - Understanding our terms, coaching agreements, and health disclaimers.",
+  title: "Terms of Service",
+  description: "Terms of Service for Rise Your Health — Understanding our program terms, health disclaimers, and coaching commitments.",
+  alternates: {
+    canonical: "https://riseyourhealthh.com/terms-of-service",
+  },
+  openGraph: {
+    title: "Terms of Service | Rise Your Health",
+    description: "Terms of Service and health coaching agreements for Rise Your Health.",
+    url: "https://riseyourhealthh.com/terms-of-service",
+  },
 };
 
 export default function TermsOfServicePage() {

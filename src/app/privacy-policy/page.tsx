@@ -3,8 +3,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Privacy Policy | Rise Your Health",
-  description: "Privacy Policy for Rise Your Health - Learn how we collect, protect, and handle your information.",
+  title: "Privacy Policy",
+  description: "Privacy Policy for Rise Your Health — Learn how we securely handle, protect, and process health intake and personal data.",
+  alternates: {
+    canonical: "https://riseyourhealthh.com/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Rise Your Health",
+    description: "Learn how Rise Your Health safeguards your personal and health consultation data.",
+    url: "https://riseyourhealthh.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

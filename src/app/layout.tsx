@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Instrument_Serif, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { BookingModalProvider } from "@/context/BookingModalContext";
 import BookingModal from "@/components/BookingModal";
+import JsonLd from "@/components/JsonLd";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -20,10 +21,85 @@ const instrumentSans = Instrument_Sans({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#022342",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
-  title: "Rise Your Health | The PCOS Reset Method — 16 Weeks to Better Hormonal & Metabolic Health",
+  metadataBase: new URL("https://riseyourhealthh.com"),
+  title: {
+    default: "Rise Your Health | The PCOS Reset Method — 16 Weeks to Hormonal & Metabolic Wellness",
+    template: "%s | Rise Your Health",
+  },
   description:
-    "The PCOS Reset Method: 16 weeks to better hormonal and metabolic health through personalized lifestyle, non-restrictive nutrition, clinical assessment, and ongoing coaching.",
+    "The PCOS Reset Method by Rise Your Health is a structured 4-month clinical and lifestyle protocol. Address PCOS, irregular cycles, insulin resistance, and hormonal health with personalized nutrition, movement, and psychologist support.",
+  keywords: [
+    "PCOS reversal",
+    "PCOD treatment",
+    "PCOS Reset Method",
+    "Rise Your Health",
+    "hormonal health coach",
+    "insulin resistance diet",
+    "irregular periods treatment",
+    "hormonal acne solutions",
+    "cycle syncing nutrition",
+    "PCOS weight loss program",
+    "holistic PCOS management",
+    "women hormonal balance",
+  ],
+  authors: [{ name: "Rise Your Health Clinical & Coaching Team" }],
+  creator: "Rise Your Health",
+  publisher: "Rise Your Health",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "https://riseyourhealthh.com",
+  },
+  openGraph: {
+    title: "Rise Your Health | The PCOS Reset Method — 16 Weeks to Better Hormonal & Metabolic Health",
+    description:
+      "A structured 4-month clinical & lifestyle protocol designed to address root causes of PCOS/PCOD with personalized nutrition, movement, and care squad support.",
+    url: "https://riseyourhealthh.com",
+    siteName: "Rise Your Health",
+    images: [
+      {
+        url: "/logo-color.png",
+        width: 800,
+        height: 600,
+        alt: "Rise Your Health — The PCOS Reset Method",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rise Your Health | The PCOS Reset Method",
+    description:
+      "Transform hormonal and metabolic health in 16 weeks with personalized lifestyle, nutrition, and expert care squad support.",
+    images: ["/logo-color.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +112,9 @@ export default function RootLayout({
       lang="en"
       className={`${instrumentSerif.variable} ${instrumentSans.variable} h-full antialiased`}
     >
+      <head>
+        <JsonLd />
+      </head>
       <body className="min-h-full font-sans bg-black text-white selection:bg-[#287417] selection:text-white">
         <BookingModalProvider>
           <SmoothScroll>{children}</SmoothScroll>

@@ -3,8 +3,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Refund Policy | Rise Your Health",
-  description: "Refund and payment policy for RISE YOUR HEALTH programs.",
+  title: "Refund Policy",
+  description: "Refund and payment policy for Rise Your Health — 100% money back guarantee and 4-month program lifetime plan terms.",
+  alternates: {
+    canonical: "https://riseyourhealthh.com/refund-policy",
+  },
+  openGraph: {
+    title: "Refund Policy | Rise Your Health",
+    description: "Refund policy and guarantee terms for Rise Your Health programs.",
+    url: "https://riseyourhealthh.com/refund-policy",
+  },
 };
 
 export default function RefundPolicyPage() {
