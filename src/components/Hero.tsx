@@ -109,7 +109,7 @@ export default function Hero() {
                 4 Pillars
               </div>
               <div className="text-xs sm:text-sm text-white/75 font-light leading-tight mt-1">
-                Clinical, Nutrition, Movement & Habits
+                Clinical, Nutrition, Movement & Mental Wellbeing
               </div>
             </div>
 
