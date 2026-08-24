@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Refund Policy",
-  description: "Refund and payment policy for Rise Your Health — 100% money back guarantee and 4-month program lifetime plan terms.",
+  description: "Refund and cancellation policy for Rise Your Health consultations, webinars, and programs.",
   alternates: {
     canonical: "https://riseyourhealthh.com/refund-policy",
   },
   openGraph: {
     title: "Refund Policy | Rise Your Health",
-    description: "Refund policy and guarantee terms for Rise Your Health programs.",
+    description: "Refund policy, session cancellation, and payment terms for Rise Your Health.",
     url: "https://riseyourhealthh.com/refund-policy",
   },
 };
@@ -28,79 +28,92 @@ export default function RefundPolicyPage() {
           >
             ← Back to Home
           </Link>
+          <span className="block font-sans text-xs font-semibold uppercase tracking-widest text-[#287417] mb-2">
+            Rise Your Health · Cancellation & Refunds
+          </span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-tight text-[#022342]">
-            Refund Policy
+            Refund & Cancellation Policy
           </h1>
           <p className="mt-3 text-xs sm:text-sm text-[#64748B]">
-            Last Updated: August 20, 2026
+            Last Updated: August 24, 2026
           </p>
         </div>
 
         <div className="space-y-10 text-[#334155] text-sm sm:text-base leading-relaxed">
-          {/* Section 1 */}
+          {/* Section 1: Payment & Registration */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              1. Lifetime Plan Structure
+              1. Payment & Registration
             </h2>
             <p>
-              We work on just one payment module where you will never have to renew the same plan in your life if you enroll for 4 months.
+              By registering for a consultation, webinar, or 4-Month PCOS Reset Program provided by Rise Your Health, you agree to pay the stated fee in full before the start of the session or program kickoff. All online payments are securely processed through the <strong>Razorpay</strong> payment gateway.
             </p>
           </section>
 
-          {/* Section 2 */}
+          {/* Section 2: Session & Webinar Refunds */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              2. Intellectual Property & No-Refund Policy
+              2. Session & Webinar Cancellations
             </h2>
             <p>
-              The work that RISE YOUR HEALTH consulting does on behalf of our clients is a non-tangible piece of intellectual property. Once the work has started, we can never get that back and you can never return it to us. It’s yours forever. It’s for this reason that we do not offer refunds once the evaluation phase has completed.
+              Refunds will only be provided if the consultation or webinar is cancelled by the organizer (Rise Your Health). No refunds will be issued if you are unable to attend a scheduled session for personal reasons. All booking tokens and consultation seat reservations are non-refundable.
             </p>
           </section>
 
-          {/* Section 3 */}
+          {/* Section 3: Lifetime Plan Structure */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              3. Receipts & Acknowledgments
+              3. Lifetime Plan Structure
             </h2>
             <p>
-              You can take screenshot or download the receipt through online or payment gateway if needed and this online receipt is sufficient acknowledgment and no other receipt will be issued/ necessary.
+              Our flagship program works on a single structured payment module where you will never have to renew the same plan in your life once you complete your 4-month enrollment and receive your personalized lifetime Maintenance Blueprint.
             </p>
           </section>
 
-          {/* Section 4 */}
+          {/* Section 4: Intellectual Property & Program Terms */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              4. Instalments & Tokens
+              4. Intellectual Property & Non-Tangible Services
             </h2>
             <p>
-              In case of non-payment of any instalment, the services will be stopped at immediate effect. Tokens are non-refundable.
+              The personalized consulting, diagnostic evaluation, meal plans, habit trackers, and care squad support provided by Rise Your Health represent proprietary, non-tangible intellectual property. Once clinical onboarding and evaluation have begun, the work and customized strategies are permanently delivered to you and cannot be returned.
             </p>
           </section>
 
-          {/* Section 5 */}
+          {/* Section 5: Receipts & Invoices */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              5. Outstanding Balances & Dispute Resolution
+              5. Receipts & Acknowledgments
             </h2>
             <p>
-              In the event that payment for the services rendered is not received within the specified time frame, we kindly reserve the right to pursue appropriate measures to ensure the resolution of any outstanding balances. This may include but is not limited to, the engagement of third-party assistance in accordance with applicable laws and regulations.
+              Upon successful transaction via our payment gateway (Razorpay), an automated electronic receipt will be generated and sent to your registered email address. You may download or screenshot this receipt for your records. This online receipt serves as complete and sufficient legal acknowledgment of payment.
             </p>
           </section>
 
-          {/* Section 6 */}
+          {/* Section 6: Instalments & Service Continuity */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              6. Contact Information
+              6. Instalments & Outstanding Balances
             </h2>
             <p>
-              If you have any questions or concerns about our refund policy, please contact us at{" "}
+              In the event that an instalment plan is arranged and an instalment payment is not received by the due date, ongoing coaching, consultations, and care squad access will be paused immediately. In the event of unresolved payment defaults, Rise Your Health reserves the right to pursue appropriate measures to recover outstanding balances in accordance with applicable laws.
+            </p>
+          </section>
+
+          {/* Section 7: Contact Information */}
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              7. Contact & Support
+            </h2>
+            <p>
+              If you have any questions or require assistance regarding your payment, receipt, or scheduling, please contact our billing desk at{" "}
               <a
                 href="mailto:admin@riseyourhealthh.com"
                 className="font-medium text-[#287417] hover:underline"
               >
                 admin@riseyourhealthh.com
               </a>{" "}
-              or call us at{" "}
+              or message our support desk at{" "}
               <a
                 href="tel:+917091899035"
                 className="font-medium text-[#287417] hover:underline"

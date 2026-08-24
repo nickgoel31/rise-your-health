@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Terms of Service",
-  description: "Terms of Service for Rise Your Health — Understanding our program terms, health disclaimers, and coaching commitments.",
+  description: "Terms of Service for Rise Your Health — Understanding our terms, conditions, payment, and coaching policies.",
   alternates: {
     canonical: "https://riseyourhealthh.com/terms-of-service",
   },
   openGraph: {
     title: "Terms of Service | Rise Your Health",
-    description: "Terms of Service and health coaching agreements for Rise Your Health.",
+    description: "Terms and conditions governing the use of Rise Your Health services and website.",
     url: "https://riseyourhealthh.com/terms-of-service",
   },
 };
@@ -28,73 +28,140 @@ export default function TermsOfServicePage() {
           >
             ← Back to Home
           </Link>
+          <span className="block font-sans text-xs font-semibold uppercase tracking-widest text-[#287417] mb-2">
+            Healthier Today. Stronger Tomorrow.
+          </span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-tight text-[#022342]">
-            Terms of Service
+            Terms & Conditions
           </h1>
           <p className="mt-3 text-xs sm:text-sm text-[#64748B]">
-            Last Updated: August 20, 2026
+            Last Updated: August 24, 2026
           </p>
         </div>
 
         <div className="space-y-10 text-[#334155] text-sm sm:text-base leading-relaxed">
+          {/* Overview */}
+          <section className="space-y-3">
+            <p>
+              This website is operated by <strong>Rise Your Health</strong>. Throughout the site, the terms &ldquo;we&rdquo;, &ldquo;us&rdquo; and &ldquo;our&rdquo; refer to Rise Your Health. Rise Your Health offers this website, including all information, tools, and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.
+            </p>
+            <p>
+              By visiting our site and/or purchasing something from us, you engage in our &ldquo;Service&rdquo; and agree to be bound by the following terms and conditions, including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/or contributors of content.
+            </p>
+            <p>
+              Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.
+            </p>
+          </section>
+
+          {/* Section 1: Payment */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              1. Acceptance of Terms
+              1. Payment
             </h2>
             <p>
-              By accessing our website, booking discovery sessions, or purchasing any programs from Rise Your Health (&ldquo;Company,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please discontinue use of our site and services.
+              By registering for a consultation, webinar, or any other service provided by Rise Your Health, you agree to pay the stated fee in full before the start of the session or event. Payment can be made securely through the <strong>Razorpay</strong> payment gateway.
             </p>
           </section>
 
+          {/* Section 2: Refunds & Tokens */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              2. Health & Medical Disclaimer
-            </h2>
-            <p className="p-4 rounded-2xl bg-[#EAF2EC] border border-[#DCE7DF] text-[#022342]">
-              <strong>Important Notice:</strong> Our coaching, educational resources, meal guidelines, and botanical suggestions are intended for informational, educational, and holistic support purposes only. They do not constitute medical diagnosis, treatment, or prescription. Always consult with your primary licensed physician or healthcare specialist before beginning any new health, supplement, or nutrition protocol.
-            </p>
-          </section>
-
-          <section className="space-y-3">
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              3. Client Commitments & Cancellations
+              2. Refunds & Booking Tokens
             </h2>
             <p>
-              Coaching sessions are collaborative partnerships. We ask clients to attend scheduled calls punctually and provide at least 24 hours notice for rescheduling. Missed sessions without prior notice may be forfeited depending on the enrolled program tier.
+              Refunds will only be provided if the session or webinar is cancelled by the organizer. No refunds will be issued if you are unable to attend for any reason. All booking tokens or consultation fees are non-refundable once processed. For further details on our program policies, please refer to our dedicated <Link href="/refund-policy" className="font-medium text-[#287417] hover:underline">Refund Policy</Link>.
             </p>
           </section>
 
+          {/* Section 3: Access */}
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              3. Access & Technical Requirements
+            </h2>
+            <p>
+              Your registration provides you with access to the live session and any associated materials. You are responsible for ensuring that you have the necessary hardware, software, and stable internet connection to participate in scheduled calls or digital sessions.
+            </p>
+          </section>
+
+          {/* Section 4: Intellectual Property */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
               4. Intellectual Property
             </h2>
             <p>
-              All program materials, workbooks, guides, videos, recipes, and website content provided by Rise Your Health are protected by intellectual property laws. These materials are for your personal, non-commercial use and may not be distributed or reproduced without prior written permission.
+              All materials, strategies, workbooks, guides, recipes, and content shared during the consultation, webinar, or on this website are the intellectual property of Rise Your Health and are protected by copyright laws. You are not authorized to reproduce, distribute, record, resell, or use any of the materials without prior written permission from Rise Your Health.
             </p>
           </section>
 
+          {/* Section 5: Medical Disclaimer */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              5. Governing Law & Modifications
+              5. Health & Medical Disclaimer
+            </h2>
+            <div className="p-4 rounded-2xl bg-[#EAF2EC] border border-[#DCE7DF] text-[#022342]">
+              <p className="mb-2">
+                <strong>Important Notice:</strong> The organizer makes no guarantees regarding the accuracy, completeness, or individual outcomes resulting from the application of the information provided during consultations, webinars, or programs. The information shared is for educational, lifestyle, and holistic wellness purposes only and is not a substitute for professional medical advice, diagnosis, or prescription.
+              </p>
+              <p>
+                All services focus on evidence-informed, natural, and lifestyle-based approaches and do not replace licensed medical diagnosis or medical treatment. Always consult with your primary healthcare physician or specialist before starting any new diet, supplement, or exercise regimen.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 6: Termination */}
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              6. Termination & Conduct
             </h2>
             <p>
-              These Terms shall be governed by and interpreted in accordance with applicable laws. We reserve the right to revise or modify these Terms at any time with immediate effect upon posting to this page.
+              Rise Your Health reserves the right to terminate your registration and deny access to services if you violate any of these terms and conditions or engage in disruptive, abusive, or inappropriate behavior during any session or communication channel.
             </p>
           </section>
 
+          {/* Section 7: Privacy */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              6. Contact Information
+              7. Privacy & Data Handling
             </h2>
             <p>
-              For any questions regarding these Terms of Service or our coaching agreements, please reach out to us at{" "}
+              We collect and process your personal data solely for the purposes of organizing the consultation, webinar, or wellness program and providing you with relevant support. All personal health intake notes and contact information are handled strictly in accordance with applicable data protection laws and our <Link href="/privacy-policy" className="font-medium text-[#287417] hover:underline">Privacy Policy</Link>.
+            </p>
+          </section>
+
+          {/* Section 8: Razorpay Policies */}
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              8. Razorpay Payment Gateway Policies
+            </h2>
+            <p>
+              By using the Razorpay payment gateway on our platform, you agree to comply with Razorpay&apos;s terms and conditions and privacy policy. You acknowledge that payment processing services are provided by Razorpay, and any technical transaction disputes must be resolved through Razorpay&apos;s dispute resolution process.
+            </p>
+          </section>
+
+          {/* Section 9: Governing Law */}
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              9. Governing Law & Jurisdiction
+            </h2>
+            <p>
+              These terms and conditions are governed by and construed in accordance with the laws of India. Any disputes arising out of or related to these terms shall be subject to the exclusive jurisdiction of the competent courts in the jurisdiction where Rise Your Health operates.
+            </p>
+          </section>
+
+          {/* Section 10: Contact Information */}
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              10. Contact Information
+            </h2>
+            <p>
+              For any questions regarding these Terms of Service, consultations, or agreements, please contact us at{" "}
               <a
                 href="mailto:admin@riseyourhealthh.com"
                 className="font-medium text-[#287417] hover:underline"
               >
                 admin@riseyourhealthh.com
               </a>{" "}
-              or call us at{" "}
+              or call/WhatsApp us at{" "}
               <a
                 href="tel:+917091899035"
                 className="font-medium text-[#287417] hover:underline"

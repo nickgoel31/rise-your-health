@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for Rise Your Health — Learn how we securely handle, protect, and process health intake and personal data.",
+  description: "Privacy Policy for Rise Your Health — Learn how we collect, protect, and handle your information.",
   alternates: {
     canonical: "https://riseyourhealthh.com/privacy-policy",
   },
@@ -28,24 +28,29 @@ export default function PrivacyPolicyPage() {
           >
             ← Back to Home
           </Link>
+          <span className="block font-sans text-xs font-semibold uppercase tracking-widest text-[#287417] mb-2">
+            Healthier Today. Stronger Tomorrow.
+          </span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.08] tracking-tight text-[#022342]">
             Privacy Policy
           </h1>
           <p className="mt-3 text-xs sm:text-sm text-[#64748B]">
-            Last Updated: August 20, 2026
+            Last Updated: August 24, 2026
           </p>
         </div>
 
         <div className="space-y-10 text-[#334155] text-sm sm:text-base leading-relaxed">
+          {/* Section 1 */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
               1. Overview & Commitment
             </h2>
             <p>
-              At Rise Your Health (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), we deeply respect your personal privacy. This Privacy Policy explains how we collect, store, utilize, and protect your personal information when you visit our website, schedule consultations, or participate in our wellness programs.
+              At <strong>Rise Your Health</strong> (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), we deeply respect your personal privacy. We will collect and process your personal data solely for the purposes of organizing your consultation, webinar, or 4-Month PCOS Reset Program and providing you with personalized, relevant care.
             </p>
           </section>
 
+          {/* Section 2 */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
               2. Information We Collect
@@ -54,13 +59,14 @@ export default function PrivacyPolicyPage() {
               We collect information that you directly provide to us, including:
             </p>
             <ul className="list-disc list-inside space-y-1.5 pl-2 text-[#475569]">
-              <li>Contact details such as your name, email address, and phone number.</li>
-              <li>Health intake notes, consultation questionnaires, and wellness background information you choose to share.</li>
-              <li>Billing and transaction details processed securely via our third-party payment providers.</li>
-              <li>Technical usage data including IP address, browser type, and site navigation metrics.</li>
+              <li>Contact details such as your full name, email address, and WhatsApp/phone number.</li>
+              <li>Health intake assessments, symptom timelines, and lifestyle background information you voluntarily share during discovery consultations.</li>
+              <li>Transaction identifiers and billing receipts securely managed via payment gateway partners.</li>
+              <li>Technical website analytics to ensure optimal browsing performance and security.</li>
             </ul>
           </section>
 
+          {/* Section 3 */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
               3. How We Use Your Information
@@ -69,25 +75,37 @@ export default function PrivacyPolicyPage() {
               Your information is used strictly to:
             </p>
             <ul className="list-disc list-inside space-y-1.5 pl-2 text-[#475569]">
-              <li>Deliver tailored holistic wellness and hormone coaching programs.</li>
-              <li>Communicate scheduling updates, session recordings, and educational resources.</li>
-              <li>Process payments and maintain administrative records.</li>
-              <li>Improve website functionality, user experience, and security.</li>
+              <li>Deliver tailored holistic wellness, nutrition, and lifestyle protocols.</li>
+              <li>Coordinate 1:1 discovery consultations and schedule live care squad sessions.</li>
+              <li>Transmit electronic receipts, appointment reminders, and program workbooks.</li>
+              <li>Maintain platform integrity, prevent unauthorized access, and fulfill legal compliance.</li>
             </ul>
           </section>
 
+          {/* Section 4 */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              4. Confidentiality & Security
+              4. Payment Processing (Razorpay)
             </h2>
             <p>
-              We maintain strict confidentiality regarding all client discussions, health intakes, and private coaching notes. We implement standard encryption and access safeguards. We never sell, rent, or lease your personal data to third parties.
+              All online payments on our platform are processed through <strong>Razorpay</strong>. We do not store or process your sensitive credit card numbers or banking PINs on our servers. By making a payment, you acknowledge that payment data is handled in compliance with Razorpay&apos;s privacy policy and security standards.
             </p>
           </section>
 
+          {/* Section 5 */}
           <section className="space-y-3">
             <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
-              5. Your Rights & Contact Information
+              5. Confidentiality & Non-Disclosure
+            </h2>
+            <p>
+              We maintain strict confidentiality regarding all client discussions, health intakes, and private coaching notes. We implement standard encryption and access safeguards. We never sell, rent, or trade your personal or health data to third-party advertisers.
+            </p>
+          </section>
+
+          {/* Section 6 */}
+          <section className="space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#022342]">
+              6. Your Rights & Contact Information
             </h2>
             <p>
               You have the right to request access to, correction of, or deletion of your personal data at any time. For questions regarding our privacy practices or to exercise your rights, please reach out to us directly at{" "}
@@ -97,7 +115,7 @@ export default function PrivacyPolicyPage() {
               >
                 admin@riseyourhealthh.com
               </a>{" "}
-              or{" "}
+              or call/WhatsApp us at{" "}
               <a
                 href="tel:+917091899035"
                 className="font-medium text-[#287417] hover:underline"
