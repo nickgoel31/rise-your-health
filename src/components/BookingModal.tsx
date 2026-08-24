@@ -51,10 +51,13 @@ const PREVIOUS_METHODS = [
 ];
 
 const TIME_SLOTS = [
-  "Morning (9:00 AM – 12:00 PM)",
-  "Afternoon (12:00 PM – 4:00 PM)",
-  "Evening (4:00 PM – 8:00 PM)",
-  "Flexible / Any Time",
+  "10:30 AM – 11:45 AM",
+  "11:45 AM – 1:00 PM",
+  "1:00 PM – 2:15 PM",
+  "3:00 PM – 4:15 PM",
+  "4:15 PM – 5:30 PM",
+  "5:30 PM – 6:45 PM",
+  "Flexible / Any of these slots",
 ];
 
 export default function BookingModal() {
