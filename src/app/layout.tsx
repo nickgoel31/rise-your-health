@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import { BookingModalProvider } from "@/context/BookingModalContext";
 import BookingModal from "@/components/BookingModal";
 import JsonLd from "@/components/JsonLd";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
@@ -119,6 +120,7 @@ export default function RootLayout({
         <BookingModalProvider>
           <SmoothScroll>{children}</SmoothScroll>
           <BookingModal />
+          <WhatsAppButton />
         </BookingModalProvider>
       </body>
     </html>
