@@ -118,7 +118,7 @@ export default function Footer() {
               Book a Call
             </button>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/riseyourhealthh/?utm_source=ig_web_button_share_sheet"
               target="_blank"
               rel="noopener noreferrer"
               className="font-sans text-sm text-[#475569] hover:text-[#287417] transition-colors"
@@ -126,7 +126,7 @@ export default function Footer() {
               Instagram
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/rise-your-healthh/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-sans text-sm text-[#475569] hover:text-[#287417] transition-colors"
