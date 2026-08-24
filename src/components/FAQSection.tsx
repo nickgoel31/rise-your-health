@@ -21,72 +21,86 @@ const FAQS: FAQItem[] = [
   {
     id: 2,
     number: "2.",
-    question: "What is PCOS/PCOD and what causes it?",
+    question: "Do I need to take medicine or artificial pills?",
     answer:
-      "PCOS (Polycystic Ovary Syndrome) and PCOD are hormonal and metabolic conditions where the ovaries produce higher-than-normal levels of androgens. Driven by root factors like insulin resistance, chronic inflammation, genetics, and high cortisol, they can lead to irregular cycles, stubborn weight, acne, hair thinning, and fertility challenges.",
+      "No. Our approach is lifestyle-based, so you won’t rely on pills for weight management or hormonal balance. If you are already prescribed medication by your doctor, our protocol works safely alongside your medical care.",
   },
   {
     id: 3,
     number: "3.",
-    question: "Do I need to take medicine or supplements?",
+    question: "What is PCOS/PCOD and how are they different?",
     answer:
-      "No. Our approach is lifestyle-based, so you won’t rely on pills for weight management or hormonal balance. If you are already taking medications prescribed by your doctor (such as Metformin, thyroid medication, or birth control), you can safely continue them alongside our lifestyle protocol.",
+      "PCOD is generally a milder condition where the ovaries release immature eggs, often closely linked to lifestyle and diet. PCOS is a more complex endocrine and metabolic disorder involving elevated androgens, insulin resistance, and cycle irregularities. Both respond exceptionally well to our structured root-cause lifestyle interventions.",
   },
   {
     id: 4,
     number: "4.",
-    question: "How is this different from regular \"dieting\" or other programs?",
+    question: "How is this different from just \"dieting\" or restrictive plans?",
     answer:
-      "We focus on the root cause, not just symptoms. We don't do restrictive or crash diets. The program is built around pocket-kitchen friendly, whole-food nutrition, cycle-syncing, sustainable movement, and addressing insulin resistance — creating clinically approved, lasting results.",
+      "We don't focus on restriction, calorie counting, or crash diets. The PCOS Reset Method is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address root causes like insulin resistance, chronic inflammation, and high cortisol.",
   },
   {
     id: 5,
     number: "5.",
-    question: "Will this program help with weight loss?",
+    question: "What if I’ve tried other programs and failed?",
     answer:
-      "Yes, absolutely. For many women with PCOS, stubborn weight gain and cravings are driven directly by insulin resistance and hormonal imbalance. By addressing these metabolic root causes rather than starving your body, sustainable weight loss follows naturally.",
+      "We focus on the root cause, not just symptoms. Our science-backed framework which is clinically approved, ensures lasting, real-world results tailored specifically to your unique metabolic profile.",
   },
   {
     id: 6,
     number: "6.",
+    question: "How soon can I expect to see tangible results?",
+    answer:
+      "Many women notice improvements in daily energy, digestion, and skin within 2 to 4 weeks. Menstrual cycle regularity, waist reduction, and metabolic shifts typically show significant measurable progress by months 2 and 3. Consistency matters most.",
+  },
+  {
+    id: 7,
+    number: "7.",
+    question: "Is this suitable if I'm already on medication (birth control, metformin, thyroid)?",
+    answer:
+      "Yes, many of our members join while taking prescribed medications. Our lifestyle changes support your body's natural insulin sensitivity and metabolic health harmoniously alongside your physician's guidance.",
+  },
+  {
+    id: 8,
+    number: "8.",
+    question: "Will this program help with sustainable weight loss?",
+    answer:
+      "Definitely. For many women with PCOS/PCOD, stubborn weight and cravings are directly driven by underlying insulin resistance. By stabilizing blood sugar and cortisol levels naturally, healthy weight loss occurs without starvation or exhausting cardio.",
+  },
+  {
+    id: 9,
+    number: "9.",
+    question: "Can this program help me get pregnant / support fertility?",
+    answer:
+      "Yes. Restoring ovulatory cycle regularity and reducing chronic inflammation creates an optimal environment for reproductive health. While we are a lifestyle program and not a fertility clinic, balanced hormonal health significantly enhances conception readiness.",
+  },
+  {
+    id: 10,
+    number: "10.",
+    question: "Do I need a formal diagnosis to join?",
+    answer:
+      "No formal diagnosis is required. Whether you have an existing diagnosis or are experiencing common symptoms like irregular periods, stubborn belly fat, acne, hair thinning, or chronic fatigue, you can start your reset right away.",
+  },
+  {
+    id: 11,
+    number: "11.",
+    question: "Who is on my Care Squad and managing my protocol?",
+    answer:
+      "Every woman is supported by our dedicated Care Squad: our Clinical/Medical team for oversight and lab reviews, a dedicated Nutritionist for whole-food cycle syncing, a Lifestyle Coach for movement and habits, and a Psychologist for mental wellbeing and stress management.",
+  },
+  {
+    id: 12,
+    number: "12.",
     question: "Why is the program structured across 4 full months (16 weeks)?",
     answer:
       "Hormone and metabolic pathways require consistent biological time to regulate. Month 1: Stabilize foundations, Month 2: Build metabolic resilience, Month 3: Optimize lingering bottlenecks, and Month 4: Consolidate habits with a personal maintenance plan so you build permanent self-reliance.",
   },
   {
-    id: 7,
-    number: "7.",
-    question: "Who is on my Care Squad and managing my protocol?",
-    answer:
-      "Every woman is supported by our dedicated multi-disciplinary Care Squad: our Clinical/Medical team for oversight and lab reviews, a dedicated Nutritionist for whole-food cycle syncing, a Lifestyle Coach for movement and habit adherence, and a Psychologist for mental wellbeing and stress management.",
-  },
-  {
-    id: 8,
-    number: "8.",
-    question: "Can this help me get pregnant and support fertility?",
-    answer:
-      "Regulating your ovulatory cycles, balancing insulin, and lowering chronic inflammation naturally builds a healthy foundation for fertility. While we are not a fertility clinic and work alongside your gynecologist, restoring natural hormonal balance significantly improves reproductive health.",
-  },
-  {
-    id: 9,
-    number: "9.",
-    question: "Do I need a formal diagnosis or lab tests to join?",
-    answer:
-      "No formal prior diagnosis is required. If you are experiencing symptoms like irregular periods, stubborn weight, acne, hair fall, or chronic fatigue, our 25+ point baseline intake and clinical review will thoroughly evaluate your symptoms and establish your starting scorecard.",
-  },
-  {
-    id: 10,
-    number: "10.",
+    id: 13,
+    number: "13.",
     question: "What happens after Month 4? Will I be dependent on a coach?",
     answer:
       "Our core mission in Month 4 is teaching you self-sufficiency. You receive a personalized lifetime PCOS Maintenance Blueprint containing your non-negotiables, early warning signs, and recovery protocols for stress or travel so you thrive independently for life.",
-  },
-  {
-    id: 11,
-    number: "11.",
-    question: "Is my health information kept confidential?",
-    answer:
-      "Yes, 100%. All your health intakes, medical history, lab reports, coaching discussions, and personal logs are strictly confidential and accessible only by your dedicated clinical Care Squad.",
   },
 ];
 
@@ -104,7 +118,7 @@ export default function FAQSection() {
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column: Title & Intro */}
-        <ScrollReveal delay={100} duration={800} distance={24} className="lg:col-span-5 flex flex-col items-start sticky top-28">
+        <ScrollReveal delay={100} duration={800} distance={24} className="lg:col-span-5 flex flex-col items-start lg:sticky lg:top-28">
           {/* Pill Badge */}
           <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E5EFE7] text-[#022342] text-[12px] font-sans font-medium tracking-wide mb-6">
             Common Questions
@@ -119,7 +133,7 @@ export default function FAQSection() {
 
           {/* Subtitle */}
           <p className="mt-4 text-[#475569] text-sm sm:text-base md:text-[1.05rem] font-light leading-relaxed max-w-sm">
-            Everything you need to know about PCOS/PCOD, our 16-week clinical protocol, and your transformation journey.
+            Everything you need to know about PCOS/PCOD, our 4-month clinical reset method, and what to expect.
           </p>
         </ScrollReveal>
 
@@ -131,9 +145,9 @@ export default function FAQSection() {
             return (
               <ScrollReveal
                 key={faq.id}
-                delay={Math.min(index * 60 + 80, 500)}
-                duration={700}
-                distance={18}
+                delay={index * 40 + 60}
+                duration={600}
+                distance={14}
               >
                 <div
                   className={`transition-all duration-300 ${
@@ -147,8 +161,9 @@ export default function FAQSection() {
                     onClick={() => toggleFAQ(faq.id)}
                     className="w-full flex items-center justify-between gap-4 text-left cursor-pointer group"
                   >
-                    <span className="font-sans text-base sm:text-lg md:text-[1.15rem] font-medium text-[#022342] tracking-tight group-hover:text-[#287417] transition-colors">
-                      {faq.number} {faq.question}
+                    <span className="font-sans text-base sm:text-[1.15rem] font-medium text-[#022342] tracking-tight group-hover:text-[#287417] transition-colors leading-snug">
+                      <span className="text-[#287417] font-semibold mr-1.5">{faq.number}</span>
+                      {faq.question}
                     </span>
                     <div
                       className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-[#64748B] transition-transform duration-300 ${
@@ -171,7 +186,7 @@ export default function FAQSection() {
                   </button>
 
                   {isOpen && (
-                    <div className="mt-4 pt-2">
+                    <div className="mt-4 pt-2 border-t border-[#EEF4EF]">
                       <p className="font-sans text-sm sm:text-[14.5px] leading-relaxed text-[#475569] font-normal">
                         {faq.answer}
                       </p>
