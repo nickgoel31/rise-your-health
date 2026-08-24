@@ -30,3 +30,7 @@ npm run dev
 # Build for production
 npm run build
 ```
+
+## Deployment
+Automated continuous deployment is managed via GitHub Actions to a standalone Node.js server.
+
