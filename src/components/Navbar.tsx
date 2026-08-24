@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { useBookingModal } from "@/context/BookingModalContext";
 
@@ -15,14 +16,17 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
+
   const [isPastHero, setIsPastHero] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { openBookingModal } = useBookingModal();
 
   useEffect(() => {
     const handleScroll = () => {
-      // Triggers once user has scrolled past ~75% of viewport height (past the hero)
-      const threshold = window.innerHeight * 0.75;
+      // On home page, triggers once past hero (~75% of viewport); on other pages, triggers after 80px
+      const threshold = isHomePage ? window.innerHeight * 0.75 : 80;
       setIsPastHero(window.scrollY > threshold);
     };
 
@@ -30,7 +34,7 @@ export default function Navbar() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -58,42 +62,44 @@ export default function Navbar() {
       const id = href.replace("/#", "").replace("#", "");
       setMobileMenuOpen(false);
 
-      if (!id) {
-        e.preventDefault();
-        const lenis = (window as unknown as { lenis?: Lenis }).lenis;
-        if (lenis) {
-          lenis.scrollTo(0, { duration: 1.4 });
-        } else {
-          window.scrollTo({ top: 0, behavior: "smooth" });
+      if (isHomePage) {
+        if (!id || id === "home") {
+          e.preventDefault();
+          const lenis = (window as unknown as { lenis?: Lenis }).lenis;
+          if (lenis) {
+            lenis.scrollTo(0, { duration: 1.4 });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+          return;
         }
-        return;
-      }
 
-      const elem = document.getElementById(id);
-      if (elem) {
-        e.preventDefault();
-        const lenis = (window as unknown as { lenis?: Lenis }).lenis;
-        if (lenis) {
-          lenis.scrollTo(elem, {
-            offset: -70,
-            duration: 1.4,
-            easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-          });
-        } else {
-          const top = elem.getBoundingClientRect().top + window.pageYOffset - 70;
-          window.scrollTo({ top, behavior: "smooth" });
+        const elem = document.getElementById(id);
+        if (elem) {
+          e.preventDefault();
+          const lenis = (window as unknown as { lenis?: Lenis }).lenis;
+          if (lenis) {
+            lenis.scrollTo(elem, {
+              offset: -70,
+              duration: 1.4,
+              easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+          } else {
+            const top = elem.getBoundingClientRect().top + window.pageYOffset - 70;
+            window.scrollTo({ top, behavior: "smooth" });
+          }
+          window.history.pushState(null, "", `#${id}`);
         }
-        window.history.pushState(null, "", `#${id}`);
       }
     }
   };
 
   return (
     <>
-      {/* ── 1. Hero Natural Top Navbar (scrolls naturally with page) ── */}
+      {/* ── 1. Natural Top Navbar (scrolls naturally with page) ── */}
       <header className="absolute top-0 left-0 right-0 z-30 bg-transparent py-4 sm:py-6">
         <div className="w-full px-5 sm:px-10 md:px-14 lg:px-16 flex items-center justify-between">
-          {/* Left Logo (White on Dark Hero) */}
+          {/* Left Logo (White on Dark Hero for Home page, Colorful on Other Pages) */}
           <Link
             href="/"
             onClick={(e) => handleNavClick(e, "/#home")}
@@ -101,7 +107,7 @@ export default function Navbar() {
             className="group flex items-center shrink-0 cursor-pointer"
           >
             <Image
-              src="/logo-full.png"
+              src={isHomePage ? "/logo-full.png" : "/logo-color.png"}
               alt="Rise Your Health"
               width={260}
               height={98}
@@ -112,13 +118,21 @@ export default function Navbar() {
 
           {/* Right Navigation Links & CTA */}
           <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
-            <nav className="hidden md:flex items-center gap-6 sm:gap-8 text-[13px] sm:text-sm font-medium tracking-wide text-white/90">
+            <nav
+              className={`hidden md:flex items-center gap-6 sm:gap-8 text-[13px] sm:text-sm font-medium tracking-wide ${
+                isHomePage ? "text-white/90" : "text-[#022342]"
+              }`}
+            >
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="hover:text-[#FE8600] transition-colors cursor-pointer"
+                  className={`transition-colors cursor-pointer ${
+                    isHomePage
+                      ? "hover:text-[#FE8600]"
+                      : "hover:text-[#287417]"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -136,7 +150,11 @@ export default function Navbar() {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="md:hidden w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center transition-transform active:scale-90"
+              className={`md:hidden w-10 h-10 rounded-full flex items-center justify-center transition-transform active:scale-90 ${
+                isHomePage
+                  ? "bg-white/10 backdrop-blur-md border border-white/20 text-white"
+                  : "bg-[#EEF4EF] border border-[#DCE7DF] text-[#022342] hover:bg-[#E0EBE2]"
+              }`}
               aria-label="Open Navigation Menu"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -250,7 +268,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-9 h-9 rounded-full bg-[#EEF4EF] hover:bg-[#E0EBE2] text-[#022342] flex items-center justify-center transition-all duration-200 cursor-pointer active:scale-95"
+                className="w-8 h-8 rounded-full bg-[#EEF4EF] hover:bg-[#E0EBE2] text-[#022342] flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="Close menu"
               >
                 <svg
@@ -269,26 +287,26 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Navigation Links */}
-            <nav className="flex flex-col gap-1.5">
+            {/* Menu Links */}
+            <nav className="flex flex-col gap-1 py-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="flex items-center justify-between px-4 py-3 rounded-2xl font-sans text-[15px] font-medium text-[#022342] hover:bg-[#EEF4EF] hover:text-[#287417] transition-colors cursor-pointer"
+                  className="px-4 py-3 rounded-xl text-base font-medium text-[#022342] hover:bg-[#EAF2EC] hover:text-[#287417] transition-all cursor-pointer flex items-center justify-between"
                 >
                   {link.label}
                   <svg
-                    width="12"
-                    height="12"
+                    width="14"
+                    height="14"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2.5"
+                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-[#889B8D]"
+                    className="text-[#94A3B8]"
                   >
                     <polyline points="9 18 15 12 9 6" />
                   </svg>
@@ -296,35 +314,21 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Bottom CTA Button */}
-            <div className="pt-2 border-t border-[#E2EBE4] flex flex-col gap-3">
+            {/* Drawer Bottom CTA */}
+            <div className="pt-4 border-t border-[#E2EBE4] flex flex-col gap-3">
               <button
                 type="button"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   openBookingModal();
                 }}
-                className="w-full flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-full bg-[#287417] hover:bg-[#216113] text-white font-sans text-sm font-medium tracking-wide shadow-md transition-all active:scale-95 cursor-pointer"
+                className="w-full py-3.5 px-6 rounded-full bg-[#287417] hover:bg-[#216113] text-white font-medium text-sm tracking-wide shadow-md transition-all active:scale-95 cursor-pointer text-center"
               >
                 Begin Your Journey
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="5" y1="12" x2="19" y2="12" />
-                  <polyline points="12 5 19 12 12 19" />
-                </svg>
               </button>
-
-              <div className="text-center font-sans text-[11px] text-[#55695A] tracking-wider uppercase">
-                The PCOS Reset Method · 16 Weeks
-              </div>
+              <p className="text-center text-[11px] text-[#64748B] font-light">
+                Complimentary 1:1 Clinical Discovery Call
+              </p>
             </div>
           </div>
         </div>
