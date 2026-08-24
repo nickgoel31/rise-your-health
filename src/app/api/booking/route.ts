@@ -1,5 +1,8 @@
 import { NextResponse } from "next/server";
 
+const DEFAULT_WEBHOOK_URL =
+  "https://script.google.com/macros/s/AKfycbyRJ0tDpKcIIJgLZtGY7oM8xzar9eWD6Fi-M8m7XLwn9PJmTFXWF_4FHRGhO0TIAB4P/exec";
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -36,22 +39,18 @@ export async function POST(request: Request) {
       notes: notes || "None provided",
     };
 
-    const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+    const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL || DEFAULT_WEBHOOK_URL;
 
-    if (webhookUrl) {
-      try {
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        });
-      } catch (webhookError) {
-        console.error("Error sending booking to Google Sheets webhook:", webhookError);
-      }
-    } else {
-      console.log("No GOOGLE_SHEETS_WEBHOOK_URL environment variable set. Booking data payload:", payload);
+    try {
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+    } catch (webhookError) {
+      console.error("Error sending booking to Google Sheets webhook:", webhookError);
     }
 
     return NextResponse.json({
