@@ -35,7 +35,7 @@ export default function RefundPolicyPage() {
               1. Lifetime Plan Structure
             </h2>
             <p>
-              We work on just one payment module where you will never have to renew the same plan in your life if you enroll for 6 months.
+              We work on just one payment module where you will never have to renew the same plan in your life if you enroll for 4 months.
             </p>
           </section>
 
