@@ -62,4 +62,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            pkill -f "server.js" || true
+            pkill -f "server.js" 2>/dev/null
+            exit 0
