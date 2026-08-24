@@ -34,12 +34,21 @@ jobs:
           cp -r public deploy/public
           echo "GOOGLE_SHEETS_WEBHOOK_URL=${{ secrets.GOOGLE_SHEETS_WEBHOOK_URL }}" > deploy/.env
 
+      - name: Ensure remote directory exists
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: mkdir -p ${{ secrets.APP_PATH }}
+
       - name: Deploy over SSH (rsync)
         uses: burnett01/rsync-deployments@7.0.2
         with:
           switches: -avz --delete
           path: deploy/
-          remote_path: ${{ secrets.APP_PATH }}/
+          remote_path: ${{ secrets.APP_PATH }}
           remote_host: ${{ secrets.SSH_HOST }}
           remote_port: ${{ secrets.SSH_PORT }}
           remote_user: ${{ secrets.SSH_USER }}
