@@ -85,6 +85,13 @@ export default function TermsOfServicePage() {
                 className="font-medium text-[#287417] hover:underline"
               >
                 admin@riseyourhealthh.com
+              </a>{" "}
+              or call us at{" "}
+              <a
+                href="tel:+917091899035"
+                className="font-medium text-[#287417] hover:underline"
+              >
+                +91 70918 99035
               </a>.
             </p>
           </section>

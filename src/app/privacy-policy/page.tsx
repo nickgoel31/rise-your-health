@@ -88,6 +88,13 @@ export default function PrivacyPolicyPage() {
                 className="font-medium text-[#287417] hover:underline"
               >
                 admin@riseyourhealthh.com
+              </a>{" "}
+              or{" "}
+              <a
+                href="tel:+917091899035"
+                className="font-medium text-[#287417] hover:underline"
+              >
+                +91 70918 99035
               </a>.
             </p>
           </section>
