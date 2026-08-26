@@ -30,7 +30,7 @@ export default function Hero() {
           preload="auto"
           className="h-full w-full object-cover object-center"
         >
-          <source src="/hero-bg-new.mp4" type="video/mp4" />
+          <source src="/final-bg.mp4" type="video/mp4" />
         </video>
 
         {/* Lighter Gradient Overlays so the video is clearly visible */}
