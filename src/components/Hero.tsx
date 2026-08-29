@@ -44,7 +44,7 @@ export default function Hero() {
           {/* Pill Badge */}
           <div className="inline-flex items-center gap-2 w-fit px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/95 text-xs sm:text-[13px] font-sans font-medium tracking-wide shadow-sm mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#FE8600] inline-block animate-pulse" />
-            The PCOS Reset Method
+            The PCOS Rebalance Protocol
           </div>
         </ScrollReveal>
 

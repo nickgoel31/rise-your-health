@@ -71,7 +71,7 @@ export default function ProgramsSection() {
             className="font-serif italic text-white/[0.03] whitespace-nowrap"
             style={{ fontSize: "clamp(80px, 18vw, 220px)", lineHeight: 1 }}
           >
-            Reset Method
+            Rebalance Protocol
           </span>
         </div>
 
@@ -91,7 +91,7 @@ export default function ProgramsSection() {
             <ScrollReveal delay={100} duration={800} distance={18}>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 text-white/80 text-[11.5px] font-sans font-medium tracking-widest uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FE8600] inline-block animate-pulse" />
-                The PCOS Reset Method
+                The PCOS Rebalance Protocol
               </div>
             </ScrollReveal>
 
@@ -147,7 +147,7 @@ export default function ProgramsSection() {
                   Program
                 </p>
                 <p className="font-sans text-xl sm:text-2xl font-medium text-white tracking-tight">
-                  The PCOS Reset Method{" "}
+                  The PCOS Rebalance Protocol{" "}
                   <span className="text-white/50 font-light">(1:1 Program)</span>
                 </p>
               </div>

@@ -270,7 +270,7 @@ export default function BookingModal() {
               aria-hidden="true"
             />
             <span className="font-sans text-[11px] sm:text-xs uppercase tracking-widest text-[#55695A] font-semibold">
-              The PCOS Reset Method · Discovery
+              The PCOS Rebalance Protocol · Discovery
             </span>
           </div>
 

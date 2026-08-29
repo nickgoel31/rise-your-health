@@ -37,7 +37,7 @@ const FAQS: FAQItem[] = [
     number: "4.",
     question: "How is this different from just \"dieting\" or restrictive plans?",
     answer:
-      "We don't focus on restriction, calorie counting, or crash diets. The PCOS Reset Method is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address underlying metabolic drivers like insulin resistance, chronic inflammation, and elevated cortisol.",
+      "We don't focus on restriction, calorie counting, or crash diets. The PCOS Rebalance Protocol is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address underlying metabolic drivers like insulin resistance, chronic inflammation, and elevated cortisol.",
   },
   {
     id: 5,
@@ -100,7 +100,7 @@ const FAQS: FAQItem[] = [
     number: "13.",
     question: "What happens after Month 4? Will I be dependent on a coach?",
     answer:
-      "Our core mission in Month 4 is teaching you self-sufficiency. You receive a personalized lifetime PCOS Maintenance Blueprint containing your non-negotiables, early warning signs, and recovery protocols for stress or travel so you thrive independently for life.",
+      "Our core mission in Month 4 is teaching you self-sufficiency. You receive a personalized lifetime Hormonal Maintenance Framework containing your non-negotiables, early warning signs, and recovery protocols for stress or travel so you thrive independently for life.",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function FAQSection() {
 
           {/* Subtitle */}
           <p className="mt-4 text-[#475569] text-sm sm:text-base md:text-[1.05rem] font-light leading-relaxed max-w-sm">
-            Everything you need to know about PCOS/PCOD, our 4-month clinical reset method, and what to expect.
+            Everything you need to know about PCOS/PCOD, our 4-month clinical rebalance protocol, and what to expect.
           </p>
         </ScrollReveal>
 

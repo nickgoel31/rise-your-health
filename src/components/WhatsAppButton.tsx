@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
   const phoneNumber = "917091899035";
   const defaultMessage = encodeURIComponent(
-    "Hi Rise Your Health, I would like to learn more about The PCOS Reset Method."
+    "Hi Rise Your Health, I would like to learn more about The PCOS Rebalance Protocol."
   );
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 

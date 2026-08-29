@@ -6,12 +6,12 @@ export default function JsonLd() {
     "@type": "MedicalBusiness",
     "@id": "https://riseyourhealthh.com/#organization",
     name: "Rise Your Health",
-    alternateName: "The PCOS Reset Method",
+    alternateName: "The PCOS Rebalance Protocol",
     url: "https://riseyourhealthh.com",
     logo: "https://riseyourhealthh.com/logo-color.png",
     image: "https://riseyourhealthh.com/logo-color.png",
     description:
-      "Rise Your Health provides The PCOS Reset Method — a structured 4-month clinical and lifestyle protocol designed for sustainable hormone balance, menstrual cycle regularity, and metabolic health.",
+      "Rise Your Health provides The PCOS Rebalance Protocol — a structured 4-month clinical and lifestyle protocol designed for sustainable hormone balance, menstrual cycle regularity, and metabolic health.",
     telephone: "+91-7091899035",
     email: "admin@riseyourhealthh.com",
     priceRange: "$$",
@@ -43,7 +43,7 @@ export default function JsonLd() {
     url: "https://riseyourhealthh.com",
     name: "Rise Your Health",
     description:
-      "16 Weeks to Better Hormonal & Metabolic Health through The PCOS Reset Method.",
+      "16 Weeks to Better Hormonal & Metabolic Health through The PCOS Rebalance Protocol.",
     publisher: {
       "@id": "https://riseyourhealthh.com/#organization",
     },
@@ -54,7 +54,7 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://riseyourhealthh.com/#service",
-    name: "The PCOS Reset Method (4-Month 1:1 Clinical Program)",
+    name: "The PCOS Rebalance Protocol (4-Month 1:1 Clinical Program)",
     serviceType: "PCOS & Hormone Health Coaching",
     provider: {
       "@id": "https://riseyourhealthh.com/#organization",
@@ -134,7 +134,7 @@ export default function JsonLd() {
         name: "How is this different from just \"dieting\" or restrictive plans?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We don't focus on restriction, calorie counting, or crash diets. The PCOS Reset Method is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address underlying metabolic drivers like insulin resistance, chronic inflammation, and elevated cortisol.",
+          text: "We don't focus on restriction, calorie counting, or crash diets. The PCOS Rebalance Protocol is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address underlying metabolic drivers like insulin resistance, chronic inflammation, and elevated cortisol.",
         },
       },
       {

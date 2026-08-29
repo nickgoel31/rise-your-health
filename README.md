@@ -1,6 +1,6 @@
-# Rise Your Health — The PCOS Reset Method
+# Rise Your Health — The PCOS Rebalance Protocol
 
-A premium, high-performance web platform built for **Rise Your Health** and **The PCOS Reset Method** — 16 Weeks to Better Hormonal & Metabolic Health.
+A premium, high-performance web platform built for **Rise Your Health** and **The PCOS Rebalance Protocol** — 16 Weeks to Better Hormonal & Metabolic Health.
 
 ## Tech Stack
 - **Framework**: Next.js 16+ (App Router, Turbopack)

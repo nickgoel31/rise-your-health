@@ -32,15 +32,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://riseyourhealthh.com"),
   title: {
-    default: "Rise Your Health | The PCOS Reset Method — 16 Weeks to Hormonal & Metabolic Wellness",
+    default: "Rise Your Health | The PCOS Rebalance Protocol — 16 Weeks to Hormonal & Metabolic Wellness",
     template: "%s | Rise Your Health",
   },
   description:
-    "The PCOS Reset Method by Rise Your Health is a structured 4-month clinical and lifestyle protocol. Address PCOS, irregular cycles, insulin resistance, and hormonal health with personalized nutrition, movement, and psychologist support.",
+    "The PCOS Rebalance Protocol by Rise Your Health is a structured 4-month clinical and lifestyle protocol. Address PCOS, irregular cycles, insulin resistance, and hormonal health with personalized nutrition, movement, and psychologist support.",
   keywords: [
     "PCOS reversal",
     "PCOD treatment",
-    "PCOS Reset Method",
+    "PCOS Rebalance Protocol",
     "Rise Your Health",
     "hormonal health coach",
     "insulin resistance diet",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     canonical: "https://riseyourhealthh.com",
   },
   openGraph: {
-    title: "Rise Your Health | The PCOS Reset Method — 16 Weeks to Better Hormonal & Metabolic Health",
+    title: "Rise Your Health | The PCOS Rebalance Protocol — 16 Weeks to Better Hormonal & Metabolic Health",
     description:
       "A structured 4-month clinical & lifestyle protocol designed to address underlying hormonal and metabolic drivers of PCOS/PCOD with personalized nutrition, movement, and care squad support.",
     url: "https://riseyourhealthh.com",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
         url: "/logo-color.png",
         width: 800,
         height: 600,
-        alt: "Rise Your Health — The PCOS Reset Method",
+        alt: "Rise Your Health — The PCOS Rebalance Protocol",
       },
     ],
     locale: "en_US",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rise Your Health | The PCOS Reset Method",
+    title: "Rise Your Health | The PCOS Rebalance Protocol",
     description:
       "Transform hormonal and metabolic health in 16 weeks with personalized lifestyle, nutrition, and expert care squad support.",
     images: ["/logo-color.png"],

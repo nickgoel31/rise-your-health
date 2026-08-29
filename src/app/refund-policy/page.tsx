@@ -46,7 +46,7 @@ export default function RefundPolicyPage() {
               1. Payment & Registration
             </h2>
             <p>
-              By registering for a consultation, webinar, or 4-Month PCOS Reset Program provided by Rise Your Health, you agree to pay the stated fee in full before the start of the session or program kickoff. All online payments are securely processed through the <strong>Razorpay</strong> payment gateway.
+              By registering for a consultation, webinar, or 4-Month PCOS Rebalance Program provided by Rise Your Health, you agree to pay the stated fee in full before the start of the session or program kickoff. All online payments are securely processed through the <strong>Razorpay</strong> payment gateway.
             </p>
           </section>
 

@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
               1. Overview & Commitment
             </h2>
             <p>
-              At <strong>Rise Your Health</strong> (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), we deeply respect your personal privacy. We will collect and process your personal data solely for the purposes of organizing your consultation, webinar, or 4-Month PCOS Reset Program and providing you with personalized, relevant care.
+              At <strong>Rise Your Health</strong> (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), we deeply respect your personal privacy. We will collect and process your personal data solely for the purposes of organizing your consultation, webinar, or 4-Month PCOS Rebalance Program and providing you with personalized, relevant care.
             </p>
           </section>
 
