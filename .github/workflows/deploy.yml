@@ -62,5 +62,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            pkill -f "[s]erver.js" 2>/dev/null
-            exit 0
+            mkdir -p ${{ secrets.APP_PATH }}/tmp
+            touch ${{ secrets.APP_PATH }}/tmp/restart.txt
