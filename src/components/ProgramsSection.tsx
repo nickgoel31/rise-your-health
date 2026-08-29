@@ -22,7 +22,7 @@ const DELIVERABLES = [
   },
   {
     number: "04",
-    title: "Root-Cause Personalized Nutrition",
+    title: "Integrative Metabolic Nutrition",
     desc: "Non-restrictive, cycle-synced food frameworks built around blood sugar balance and hormonal health.",
   },
   {
@@ -32,8 +32,8 @@ const DELIVERABLES = [
   },
   {
     number: "06",
-    title: "Sleep & Cortisol Regulation Toolkit",
-    desc: "Circadian rhythm protocols, nervous system tools, and adrenal stress recovery routines.",
+    title: "Sleep & Stress Recovery Toolkit",
+    desc: "Circadian rhythm protocols, nervous system soothing tools, and adrenal stress recovery routines.",
   },
   {
     number: "07",
@@ -42,7 +42,7 @@ const DELIVERABLES = [
   },
   {
     number: "08",
-    title: "Lifetime PCOS Maintenance Blueprint",
+    title: "Lifetime Hormonal Maintenance Framework",
     desc: "Your personal post-program SOP: Non-Negotiables, Warning Signs & a Recovery Protocol for travel and stress.",
   },
 ];
@@ -50,7 +50,7 @@ const DELIVERABLES = [
 const STATS = [
   { value: "16", label: "Weeks" },
   { value: "4", label: "Phases" },
-  { value: "4", label: "Pillars" },
+  { value: "100%", label: "Personalized" },
   { value: "1:1", label: "Program" },
 ];
 

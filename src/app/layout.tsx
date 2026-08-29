@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Rise Your Health | The PCOS Reset Method — 16 Weeks to Better Hormonal & Metabolic Health",
     description:
-      "A structured 4-month clinical & lifestyle protocol designed to address root causes of PCOS/PCOD with personalized nutrition, movement, and care squad support.",
+      "A structured 4-month clinical & lifestyle protocol designed to address underlying hormonal and metabolic drivers of PCOS/PCOD with personalized nutrition, movement, and care squad support.",
     url: "https://riseyourhealthh.com",
     siteName: "Rise Your Health",
     images: [

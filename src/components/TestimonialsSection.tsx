@@ -74,7 +74,7 @@ const TESTIMONIALS_COL_3: Testimonial[] = [
   {
     id: 3,
     quote:
-      "Mujhe lagta tha PCOS ke sath belly fat loss impossible hai. But here no crash diets, sirf root-cause habits. Lost 8 kgs in 3 months!",
+      "Mujhe lagta tha PCOS ke sath belly fat loss impossible hai. But here no crash diets, sirf sustainable metabolic habits. Lost 8 kgs in 3 months!",
     name: "Sneha Verma",
     gender: "female",
     colorScheme: {
@@ -262,7 +262,7 @@ export default function TestimonialsSection() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 w-full text-xs sm:text-[13px] text-[#475569] font-medium font-sans">
               <span className="flex items-center gap-2">
-                <span className="text-[#287417] text-base">✓</span> Root-Cause Diagnostics
+                <span className="text-[#287417] text-base">✓</span> Comprehensive Diagnostics
               </span>
               <span className="flex items-center gap-2">
                 <span className="text-[#287417] text-base">✓</span> Zero Crash Diets

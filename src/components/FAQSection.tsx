@@ -30,21 +30,21 @@ const FAQS: FAQItem[] = [
     number: "3.",
     question: "What is PCOS/PCOD and how are they different?",
     answer:
-      "PCOD is generally a milder condition where the ovaries release immature eggs, often closely linked to lifestyle and diet. PCOS is a more complex endocrine and metabolic disorder involving elevated androgens, insulin resistance, and cycle irregularities. Both respond exceptionally well to our structured root-cause lifestyle interventions.",
+      "PCOD is generally a milder condition where the ovaries release immature eggs, often closely linked to lifestyle and diet. PCOS is a more complex endocrine and metabolic disorder involving elevated androgens, insulin resistance, and cycle irregularities. Both respond exceptionally well to our structured clinical lifestyle interventions.",
   },
   {
     id: 4,
     number: "4.",
     question: "How is this different from just \"dieting\" or restrictive plans?",
     answer:
-      "We don't focus on restriction, calorie counting, or crash diets. The PCOS Reset Method is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address root causes like insulin resistance, chronic inflammation, and high cortisol.",
+      "We don't focus on restriction, calorie counting, or crash diets. The PCOS Reset Method is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address underlying metabolic drivers like insulin resistance, chronic inflammation, and elevated cortisol.",
   },
   {
     id: 5,
     number: "5.",
     question: "What if I’ve tried other programs and failed?",
     answer:
-      "We focus on the root cause, not just symptoms. Our science-backed framework which is clinically approved, ensures lasting, real-world results tailored specifically to your unique metabolic profile.",
+      "We focus on underlying metabolic mechanisms, not just surface symptoms. Our science-backed framework which is clinically approved, ensures lasting, real-world results tailored specifically to your unique metabolic profile.",
   },
   {
     id: 6,

@@ -60,10 +60,10 @@ export default function JsonLd() {
       "@id": "https://riseyourhealthh.com/#organization",
     },
     description:
-      "A 16-week multidisciplinary program combining clinical health baseline testing, root-cause nutrition, progressive movement, and psychologist-led mental wellbeing support to resolve PCOS symptoms naturally.",
+      "A 16-week multidisciplinary program combining clinical health baseline testing, integrative metabolic nutrition, progressive movement, and psychologist-led mental wellbeing support to resolve PCOS symptoms naturally.",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "The 4 Continuous Pillars",
+      name: "The 4 Care Foundations",
       itemListElement: [
         {
           "@type": "Offer",
@@ -77,7 +77,7 @@ export default function JsonLd() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "2. Root-Cause Personalized Nutrition",
+            name: "2. Integrative Metabolic Nutrition",
             description: "Cycle-synced, pocket-kitchen-friendly whole foods focused on blood sugar balance.",
           },
         },
@@ -126,7 +126,7 @@ export default function JsonLd() {
         name: "What is PCOS/PCOD and how are they different?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "PCOD is generally a milder condition where the ovaries release immature eggs, often closely linked to lifestyle and diet. PCOS is a more complex endocrine and metabolic disorder involving elevated androgens, insulin resistance, and cycle irregularities. Both respond exceptionally well to our structured root-cause lifestyle interventions.",
+          text: "PCOD is generally a milder condition where the ovaries release immature eggs, often closely linked to lifestyle and diet. PCOS is a more complex endocrine and metabolic disorder involving elevated androgens, insulin resistance, and cycle irregularities. Both respond exceptionally well to our structured clinical lifestyle interventions.",
         },
       },
       {
@@ -134,7 +134,7 @@ export default function JsonLd() {
         name: "How is this different from just \"dieting\" or restrictive plans?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We don't focus on restriction, calorie counting, or crash diets. The PCOS Reset Method is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address root causes like insulin resistance, chronic inflammation, and high cortisol.",
+          text: "We don't focus on restriction, calorie counting, or crash diets. The PCOS Reset Method is built around pocket-kitchen-friendly, cycle-synced nutrition and sustainable habit shifts that address underlying metabolic drivers like insulin resistance, chronic inflammation, and elevated cortisol.",
         },
       },
       {
@@ -142,7 +142,7 @@ export default function JsonLd() {
         name: "What if I’ve tried other programs and failed?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We focus on the root cause, not just symptoms. Our science-backed framework which is clinically approved, ensures lasting, real-world results tailored specifically to your unique metabolic profile.",
+          text: "We focus on underlying metabolic mechanisms, not just surface symptoms. Our science-backed framework which is clinically approved, ensures lasting, real-world results tailored specifically to your unique metabolic profile.",
         },
       },
       {

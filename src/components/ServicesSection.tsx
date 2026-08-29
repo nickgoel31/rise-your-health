@@ -71,7 +71,7 @@ function FourPetalIcon() {
   );
 }
 
-// The 4 Continuous Pillars of the 4-Month Transformation Program
+// The 4 Continuous Foundations of the 4-Month Transformation Program
 const SERVICES: ServiceItem[] = [
   {
     id: "clinical-assessment",
@@ -83,7 +83,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     id: "nutrition-protocol",
-    title: "2. Root-Cause Personalized Nutrition",
+    title: "2. Integrative Metabolic Nutrition",
     description:
       "Personalized food frameworks focused on blood sugar balance, adequate protein, fibre, and cycle syncing — strictly avoiding restrictive or unsustainable diets.",
     href: "/#roadmap",
@@ -119,13 +119,13 @@ export default function ServicesSection() {
           <div className="max-w-2xl">
             {/* Pill Badge */}
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E5EFE7] text-[#022342] text-[12px] font-sans font-medium tracking-wide mb-5">
-              The 4 Continuous Pillars
+              The 4 Care Foundations
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-normal leading-[1.08] tracking-tight text-[#022342]">
               How we help you heal
             </h2>
             <p className="mt-4 text-[#475569] text-sm sm:text-base md:text-[1.05rem] font-light leading-relaxed">
-              Four clinical and lifestyle stages running continuously throughout your 4-month transformation to address root causes, not just symptoms.
+              Four clinical and lifestyle dimensions running continuously throughout your 4-month transformation to address underlying hormonal drivers, not just symptoms.
             </p>
           </div>
 
